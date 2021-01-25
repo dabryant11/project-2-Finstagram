@@ -1,0 +1,13 @@
+<h1><%=@picture.title%>
+</h1>
+<br>
+<img src="<%=@picture.image_url%>" alt= "<%@picture.title%>" width = "200" height=auto/>
+<br>
+<%= button_to "edit", edit_picture_path(@picture), method: :get %>
+<br>
+<%= button_to "delete", picture_path(@picture),  method: :delete, data: {confirm: "Are you sure you want to delete this?"} %>
+<br>
+<br>
+<br>
+<%= button_to "back", pictures_path, method: :get %>
+

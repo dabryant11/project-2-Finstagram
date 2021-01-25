@@ -1,0 +1,16 @@
+<h1>NEW PICTURE </h1> 
+
+ <%= form_for @picture, controller: 'pictures', action: 'create' do |f| %>
+      <%= f.label 'Title'%>
+      <%= f.text_field :title%>
+      
+      <%= f.label 'Image URL'%>
+      <%= f.text_field :image_url%>
+
+       <%= f.label 'User ID'%>
+      <%= f.collection_select :user_id, User.all, :id, :name%>
+      
+      <%= f.submit 'POST!'%>
+  <%end%>
+<br>
+  <%= button_to "back", pictures_path, method: :get %>

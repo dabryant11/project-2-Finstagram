@@ -1,0 +1,23 @@
+<h1>NEW USER</h1>
+
+
+
+<%= form_for @user, controller: 'users', action: 'create' do |f| %>
+    <%= f.label 'Name'%>
+    <%= f.text_field :name%>
+    
+    <%= f.label 'Username'%>
+    <%= f.text_field :username%>
+
+    <%= f.label 'Email'%>
+    <%= f.text_field :email%>
+
+    <%= f.label 'Password'%>
+    <%= f.text_field :password%>
+
+    <%= f.submit 'WELCOME!'%>
+<%end%>
+<br>
+<%= button_to "back", users_path, method: :get %>
+
+

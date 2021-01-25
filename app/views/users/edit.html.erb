@@ -1,0 +1,17 @@
+<h1>Users#edit</h1>
+<br>
+
+<%= form_for @user do |f|%>
+<%=f.label "Name"%>
+<%=f.text_field :name%>
+<%=f.label "Username"%>
+<%=f.text_field :username%>
+<%=f.label "Email"%>
+<%=f.text_field :email%>
+<%=f.label "password"%>
+<%=f.text_field :password%>
+
+<%=f.submit "Change "%>
+<%end%>
+<br>
+<%= button_to "back", user_path(@user), method: :get %>

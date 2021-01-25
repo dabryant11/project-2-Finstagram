@@ -1,0 +1,19 @@
+<h1>Edit Picture</h1>
+
+<%=@picture.title%>
+<br>
+<img src="<%=@picture.image_url%>" alt= "<%@picture.title%>" width = "100" height=auto/>
+
+<%= form_for @picture do |f|%>
+<%=f.label "Title"%>
+<%=f.text_field :title%>
+<!-----<%=f.label "Image"%>
+<%=f.text_field :image_url%>
+<%=f.label "User"%>
+<%=f.collection_select :user_id, User.all, :id, :name%> ---->
+<%=f.submit "Change "%>
+<%end%>
+<br>
+<%= button_to "back", picture_path, method: :get %>
+
+

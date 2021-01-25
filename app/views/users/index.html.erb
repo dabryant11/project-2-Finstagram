@@ -1,0 +1,17 @@
+<%= button_to 'pictures', pictures_path, method: :get%>
+
+<h1>Users</h1>
+
+<%= button_to "NEW USER", new_user_path, method: :get %>
+
+<br>
+<br>
+<% @users.each do |user|%>
+<%=link_to user.name, user_path(user.id)%>
+<br>
+<%=user.username%>
+<br>
+<%=user.email%>
+<br>
+<br>
+<%end%>

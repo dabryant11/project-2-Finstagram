@@ -1,0 +1,20 @@
+<%= button_to 'users', users_path, method: :get%>
+
+<h1>Pictures</h1>
+
+<%= button_to "NEW POST", new_picture_path, method: :get %>
+<% @pictures.each do |picture|%>
+<br>
+<br>
+<br>
+<br>
+<%= link_to picture.title, picture_path(picture.id)%>
+
+<br>
+<img alt="<%=picture.title%>" src="<%=picture.image_url%>" width="200" height=auto />
+<br>
+<%end%>
+<br>
+<br>
+<br>
+<br>
