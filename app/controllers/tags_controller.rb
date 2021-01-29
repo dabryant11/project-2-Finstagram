@@ -22,16 +22,24 @@ class TagsController < ApplicationController
   end
 
   # def most_popular
-  #   tag.pictures.sort_by do|tag|tag.pictures.length
-  #     .length - 1
-  #     .length - 2
-  #     .length - 3
+  #   tag.pictures.length.sort_by do|p|
+  #     p[.length - 1].name
+      
   #   end
   # end
+
+  def create  
+    @tag = Tag.create(tag_params)
+    redirect_to tags_path
+  end
 
   private 
 
   def tag_helper
     @tag = Tag.find(params[:id])
+  end
+
+  def tag_params
+    params.require(:tag).permit(:name)
   end
 end

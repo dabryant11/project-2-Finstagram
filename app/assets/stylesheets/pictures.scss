@@ -1,3 +1,106 @@
 // Place all the styles related to the Pictures controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+ul#pictures {
+    // column-count: 3;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-around;
+    list-style: none;
+    
+
+}
+h1 {
+    text-align:center;
+}
+// ul#users {
+//     // column-count: 3;
+    
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     justify-content: space-around;
+//     align-content: space-around;
+//     list-style: none;
+    
+
+// }
+// ul#tags {
+//     // column-count: 3;
+    
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     justify-content: space-around;
+//     align-content: space-around;
+//     list-style: none;
+    
+
+// }
+// ul#comments {
+//     // column-count: 3;
+    
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     justify-content: space-around;
+//     align-content: space-around;
+//     list-style: none;
+    
+
+// }
+
+// // ul#picture {
+// //     // column-count: 3;
+    
+// //     display: center;
+// //     // flex-wrap: wrap;
+// //     align-items: right;
+// //     justify-content: space-around;
+// //     align-content: space-around;
+// //     list-style: none;
+    
+
+// // }
+
+
+
+// // ul#pictures {
+// //     column-count: 3;
+// //     border: red 1px solid;
+// //     list-style: none;
+// //     display: flex;
+// //     flex-wrap: wrap;
+// //     justify-content: center;
+// //     align-pictures: center;
+// // }
+
+// // .picture {
+// //     border: black 1px solid;
+// //     margin: 1rem;
+// //     border-radius: 20%;
+// //     box-shadow: 1rem 2rem cadetblue;
+// // }
+
+// // .picture img {
+// //     display: block;
+// //     max-width: 10rem;
+//     max-height: 10rem;
+//     width: auto;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+// .picture .link {
+//     padding: 2rem;
+// }
+
+// .picture form{
+//     padding: 1rem;
+//     width: 50%; 
+//     margin: 0 auto;
+// }

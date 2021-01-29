@@ -1,19 +1,22 @@
-<%= button_to 'users', users_path, method: :get%>
 
-<h1>Pictures</h1>
 
-<%= button_to "NEW POST", new_picture_path, method: :get %>
+
+<h1>PICTURES <%= button_to "NEW POST", new_picture_path, method: :get %>
+</h1>
+
+<ul id="pictures">
 <% @pictures.each do |picture|%>
 <br>
+<li class="picture">
 <br>
 <br>
 <br>
-<%= link_to picture.title, picture_path(picture.id)%>
-
 <br>
-<img alt="<%=picture.title%>" src="<%=picture.image_url%>" width="200" height=auto />
+<a href = <%=picture_path(picture.id)%>> <img alt="<%=picture.title%>" src="<%=picture.image_url%>" width="200" height=auto />  </a>
 <br>
+</li>
 <%end%>
+</ul>
 <br>
 <br>
 <br>

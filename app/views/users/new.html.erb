@@ -5,19 +5,32 @@
 <%= form_for @user, controller: 'users', action: 'create' do |f| %>
     <%= f.label 'Name'%>
     <%= f.text_field :name%>
-    
+    <br>
+    <br>
     <%= f.label 'Username'%>
     <%= f.text_field :username%>
-
+    <br>
+    <br>
     <%= f.label 'Email'%>
     <%= f.text_field :email%>
-
+    <br>
+    <br>
     <%= f.label 'Password'%>
     <%= f.text_field :password%>
-
+    <br>
+    <br>
     <%= f.submit 'WELCOME!'%>
 <%end%>
 <br>
+
+<% if flash[:messages] %>
+    <%flash[:messages].each do |message|%>
+    <h2  style="color:red;text-align:center"> <%=message%>  </h2> 
+        <p/>
+
+    <%end%>
+<%end%>
+
 <%= button_to "back", users_path, method: :get %>
 
 

@@ -4,24 +4,21 @@ Rails.application.routes.draw do
   
   get '/tags', to: 'tags#index', as: 'tags'
   get '/tags/new', to: 'tags#new', as: 'new_tag'
+  post '/tags', to: 'tags#create'
   get '/tags/:id', to: 'tags#show', as: 'tag'
   get '/tags/:id/edit', to: 'tags#edit', as: 'edit_tag'
-
-  # new '/tags/new', to: 'tags#new', as: 'new_tag
-  # delete '/tags/:id', to: 'tags#destroy'
-  # patch '/tags/:id', to: 'tags#update'
-  # post '/tags', to: 'tags#create'
+  delete '/tags/:id', to: 'tags#destroy'
+  patch '/tags/:id', to: 'tags#update'
 
   ######### PICTURE TAGS ###############
 
   get '/picture_tags', to: 'picture_tags#index', as: 'picture_tags'
   get '/picture_tags/new', to: 'picture_tags#new', as: 'new_picture_tag'
+  post '/picture_tags', to: 'picture_tags#create'
   get '/picture_tags/:id', to: 'picture_tags#show', as: 'picture_tag'
   get '/picture_tags/:id/edit', to: 'picture_tags#edit', as: 'edit_picture_tag'
-
-  # delete '/picture_tags/:id', to: 'picture_tags#destroy'
-  # patch '/picture_tags/:id', to: 'picture_tags#update'
-  # post '/picture_tags', to: 'picture_tags#create'
+  delete '/picture_tags/:id', to: 'picture_tags#destroy'
+  patch '/picture_tags/:id', to: 'picture_tags#update'
   
   ######### PICTURES ###############
 
@@ -38,12 +35,11 @@ Rails.application.routes.draw do
 
   get '/comments', to: 'comments#index', as: 'comments'
   get '/comments/new', to: 'comments#new', as: 'new_comment'
+  post '/comments', to: 'comments#create'
   get '/comments/:id', to: 'comments#show', as: 'comment'
   get '/comments/:id/edit', to: 'comments#edit', as: 'edit_comment'
-
-  # delete '/comments/:id', to: 'comments#destroy'
-  # patch '/comments/:id', to: 'comments#update'
-  # post '/comments', to: 'comments#create'
+  delete '/comments/:id', to: 'comments#destroy'
+  patch '/comments/:id', to: 'comments#update'
 
   ######### USERS ###############
 

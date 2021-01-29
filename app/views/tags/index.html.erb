@@ -1,6 +1,14 @@
-<h1>Tags#index</h1>
+
+
+<h1>TAGS <%= button_to "NEW TAG", new_tag_path, method: :get%>
+</h1>
+<ul id="tags">
+
+<br>
 <% @tags.each do |tag|%>
-<%=tag.name%>
+<%=link_to tag.name, tag_path(tag.id), method: :get%>
 <br>
 <br>
 <%end%>
+</ul>
+

@@ -1,4 +1,4 @@
-<h1>Edit Picture</h1>
+<h1>EDIT PICTURE</h1>
 
 <%=@picture.title%>
 <br>
@@ -13,6 +13,7 @@
 <%=f.collection_select :user_id, User.all, :id, :name%> ---->
 <%=f.submit "Change "%>
 <%end%>
+<%= button_to "add tag", new_picture_tag_path, method: :get%>
 <br>
 <%= button_to "back", picture_path, method: :get %>
 

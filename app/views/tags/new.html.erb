@@ -1,1 +1,11 @@
-<h1>NEW TAGGGGG</h1>
+<h1>NEW TAG</h1>
+
+
+ <%= form_for @tag, controller: 'tags', action: 'create' do |f| %>
+      <%= f.label 'Name'%>
+      <%= f.text_field :name%>
+      <br>
+      <br>
+      <br>
+      <%= f.submit 'SUBMIT'%>
+  <%end%>

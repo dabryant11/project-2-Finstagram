@@ -1,0 +1,14 @@
+
+<h1>pic tags </h1>
+
+
+<%= form_for @picture_tag, controller: 'picture_tags', action: 'create' do |f| %>
+
+<%=f.label"Picture"%>
+<%=f.collection_select :picture_id, Picture.all, :id, :title%>
+<%=f.label"Tag"%>
+<%=f.collection_select :tag_id, Tag.all, :id, :name%>
+
+<%=f.submit "Submit"%>
+
+<%end%>

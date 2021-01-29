@@ -22,8 +22,6 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
-  
-
   # def create
   #   @user = User.find_by(name: params[:user][:name])
   #   # if @user && @user.authenticate(params[:user][:password])
@@ -39,12 +37,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params(:name, :password, :email, :username))
+    @user = User.create(user_params)
     if @user.valid?
       redirect_to users_path
     else
-      flash[:messages] = new_user_path.errors.full_messages
-      redirect_to new_item_path
+      flash[:messages] = @user.errors.full_messages
+      redirect_to new_user_path
   end
 end
 
@@ -54,7 +52,7 @@ end
     @user = User.find(params[:id])
   end
 
-  def user_params(*args)
+  def user_params
     params.require(:user).permit(:name, :username, :email, :password)
   end
 end

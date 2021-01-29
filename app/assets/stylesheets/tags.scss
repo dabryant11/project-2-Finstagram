@@ -1,3 +1,32 @@
 // Place all the styles related to the Tags controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+    text-align:center;
+}
+
+ul#tags {
+    // column-count: 3;
+    
+    display: flex;
+    // flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    // list-style: none;
+    
+
+}
+
+ul#pictures {
+    // column-count: 3;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-around;
+    list-style: none;
+    
+
+}
